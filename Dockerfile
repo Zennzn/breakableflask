@@ -11,3 +11,6 @@ COPY . .
 EXPOSE 4000
 
 CMD ["python", "main.py"]
+
+RUN useradd -m myuser
+USER myuser
