@@ -9,5 +9,3 @@ COPY . .
 
 CMD ["python", "main.py"]
 
-RUN useradd -m myuser
-USER yass
