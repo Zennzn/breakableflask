@@ -36,3 +36,6 @@ USER appuser
 EXPOSE 5000
 
 CMD ["python", "main.py"]
+
+RUN useradd -m myuser
+USER myuser
