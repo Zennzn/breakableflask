@@ -1,13 +1,13 @@
-FROM python:3.10-slim
+FROM python:3.11-slim
 
 WORKDIR /app
 
-COPY requirements.txt requirements.txt
+# Installer les dépendances
+COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
-CMD ["python", "main.py"]
+EXPOSE 4000
 
-RUN useradd -m myuser
-USER myuser
+CMD ["python", "main.py"]
